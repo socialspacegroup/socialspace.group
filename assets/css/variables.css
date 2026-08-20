@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Social Space - Local Font Declarations & Variables
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Filson Pro Local Font Families (.otf)
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProThin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProHeavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('../fonts/filson-pro/FilsonProBlack.otf') format('opentype');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Montserrat Local Font Families (.ttf)
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback Google Fonts & Code Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+
+/* --------------------------------------------------------------------------
+   3. Design System Variables & Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Core Colors */
+  --color-pink: #FF00FF;
+  --color-pink-dark: #C800C8;
+  --color-pink-glow: rgba(255, 0, 255, 0.35);
+
+  --color-yellow: #FFC900;
+  --color-yellow-dark: #D4A600;
+  --color-yellow-glow: rgba(255, 201, 0, 0.35);
+
+  --color-cyan: #00FFFF;
+  --color-cyan-dark: #00C8C8;
+  --color-cyan-glow: rgba(0, 255, 255, 0.3);
+
+  /* Dark Theme Surfaces */
+  --color-bg-dark: #060913;
+  --color-bg-surface: #0a0f1e;
+  --color-bg-card: rgba(16, 22, 38, 0.65);
+  --color-bg-card-hover: rgba(25, 35, 60, 0.85);
+  --color-bg-input: rgba(10, 15, 28, 0.8);
+  
+  /* Borders */
+  --color-border-card: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 0, 255, 0.3);
+  --color-border-cyan: rgba(0, 255, 255, 0.3);
+
+  /* Text & Typography Colors */
+  --color-text-main: #F0F4F8;
+  --color-text-muted: #94A3B8;
+  --color-text-dim: #64748B;
+  --color-text-dark: #060913;
+
+  /* Gradient Palette */
+  --gradient-primary: linear-gradient(135deg, #FF00FF 0%, #FF7700 50%, #FFC900 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #FF33FF 0%, #FF8811 50%, #FFD633 100%);
+  --gradient-accent: linear-gradient(135deg, #FF00FF 0%, #00FFFF 100%);
+  --gradient-cyan: linear-gradient(135deg, #00FFFF 0%, #0088FF 100%);
+  --gradient-text: linear-gradient(135deg, #FFFFFF 20%, #FF55FF 60%, #FFC900 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --gradient-hero-text: linear-gradient(135deg, #FFFFFF 0%, #FF77FF 40%, #FFC900 80%, #00FFFF 100%);
+
+  /* Typography Families */
+  --font-logo-heavy: 'Filson Pro', sans-serif;
+  --font-logo-thin: 'Filson Pro', sans-serif;
+  --font-heading: 'Filson Pro', 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Layout & Geometry */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows & Blur */
+  --glass-blur: blur(18px);
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-glow-pink: 0 0 30px var(--color-pink-glow);
+  --shadow-glow-yellow: 0 0 30px var(--color-yellow-glow);
+  --shadow-glow-cyan: 0 0 30px var(--color-cyan-glow);
+}

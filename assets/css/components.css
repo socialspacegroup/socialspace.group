@@ -1,0 +1,441 @@
+/* ==========================================================================
+   Social Space - UI Components (Vivid App Brand Gradients & Glass Cards)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Navigation Header
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.25rem 0;
+  transition: all var(--transition-normal);
+}
+
+.navbar.scrolled {
+  background: rgba(6, 9, 19, 0.88);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+  padding: 0.85rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 255, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo Layout (Left Aligned with SVG Logo and Text) */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.logo-icon-wrap {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 10px var(--color-pink-glow));
+  transition: transform var(--transition-normal);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.08);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.brand-title {
+  font-family: var(--font-logo-heavy);
+  font-weight: 900;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width var(--transition-fast);
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* Mobile Navigation Toggle & Dropdown */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(8, 12, 24, 0.96);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.mobile-menu-dropdown.active {
+  display: flex;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border-card);
+}
+
+.mobile-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Glassmorphism Cards
+   -------------------------------------------------------------------------- */
+.card-glass {
+  background: var(--color-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glass-interactive {
+  cursor: pointer;
+}
+
+.card-glass-interactive:hover {
+  background: var(--color-bg-card-hover);
+  border-color: rgba(255, 0, 255, 0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px var(--color-pink-glow);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Buttons with Vivid App Brand Gradients (Discord & Root Theme)
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.88rem 1.75rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-app-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.btn-app-icon-sm {
+  width: 15px;
+  height: 15px;
+}
+
+.btn-app-icon-lg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Striking Discord Brand Gradient (#5865F2 Theme) */
+.btn-discord {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.22) 0%, rgba(71, 82, 196, 0.4) 100%);
+  border: 1px solid #5865F2;
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(88, 101, 242, 0.35);
+}
+
+.btn-discord:hover {
+  background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+  border-color: #5865F2;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(88, 101, 242, 0.6);
+}
+
+/* Striking Root App Brand Gradient (#7C3AED Theme) */
+.btn-root {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.22) 0%, rgba(109, 40, 217, 0.4) 100%);
+  border: 1px solid #7C3AED;
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+}
+
+.btn-root:hover {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+  border-color: #7C3AED;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6);
+}
+
+/* Secondary Button (Outline Glass Light) */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 0, 255, 0.15);
+  border-color: var(--color-pink);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--color-pink-glow);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 1.15rem 2.25rem;
+  font-size: 1.05rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Badges & Status Indicators
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-gradient {
+  position: relative;
+  background: rgba(16, 22, 38, 0.9);
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  background-image: linear-gradient(rgba(16, 22, 38, 0.9), rgba(16, 22, 38, 0.9)), var(--gradient-primary);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+}
+
+.badge-cyan {
+  background: rgba(0, 255, 255, 0.12);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  color: var(--color-cyan);
+}
+
+.badge-yellow {
+  background: rgba(255, 201, 0, 0.12);
+  border: 1px solid rgba(255, 201, 0, 0.4);
+  color: var(--color-yellow);
+}
+
+.badge-discord {
+  background: rgba(88, 101, 242, 0.15);
+  border: 1px solid rgba(88, 101, 242, 0.4);
+  color: #5865F2;
+}
+
+.badge-root {
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  color: #A78BFA;
+}
+
+.live-dot-pink {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-pink);
+  box-shadow: 0 0 10px var(--color-pink);
+  animation: pulse-pink 1.8s infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Modal Dialog with Fine Gradient Border
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 5, 12, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+  padding: 1.5rem;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 520px;
+  background: var(--color-bg-surface);
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--color-bg-surface), var(--color-bg-surface)), var(--gradient-primary);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px var(--color-pink-glow);
+  position: relative;
+  transform: translateY(20px) scale(0.96);
+  transition: transform var(--transition-normal);
+}
+
+.modal-backdrop.active .modal-box {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  color: var(--color-text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: rgba(255, 0, 255, 0.2);
+  color: #FFFFFF;
+}
+
+
+
